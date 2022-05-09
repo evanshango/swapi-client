@@ -1,0 +1,11 @@
+<div class="search-container">
+  <div class="search-input" *ngIf="!detailPage">
+    <form class="search-input" [formGroup]="form">
+      <input type="text" name="search" placeholder="Type a Character Name..." id="searchTerm" formControlName="search">
+      <button (click)="performSearch()" *ngIf="!isSearch">Search</button>
+      <button (click)="clearSearch()" *ngIf="isSearch" class="clear-btn">Clear</button>
+    </form>
+  </div>
+  <h3 [style]="detailPage ? 'color: #424242' : ''">{{title}}</h3>
+  <p *ngIf="extras">{{extras}}</p>
+</div>

@@ -1,0 +1,22 @@
+.pagination-container {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  padding: 1rem 0;
+
+  button {
+    border: none;
+    outline: none;
+    background: dodgerblue;
+    color: #ffffff;
+    cursor: pointer;
+    padding: .3rem 1rem;
+    border-radius: 5px;
+
+    &:disabled {
+      cursor: not-allowed;
+      background: white;
+      color: #272B30;
+    }
+  }
+}

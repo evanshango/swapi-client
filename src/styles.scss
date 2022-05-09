@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  .fa, .fab, .far {
+    font-size: 1.5rem;
+  }
+}
+
+body, .p-component {
+  font-family: 'Open Sans', 'sans-serif';
+  font-size: 1.1rem;
+  margin: 0;
+  padding: 0;
+  background: var(--surface-200);
+  color: #424242;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff3a0095;
+  border-radius: 8px;
+}

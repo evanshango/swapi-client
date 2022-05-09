@@ -1,0 +1,100 @@
+.table-container {
+  overflow-x: scroll;
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+
+    tr {
+      border: 1px solid #dddddd;
+
+      td, th {
+        text-align: left;
+        padding: 1.5rem 1rem;
+        border-bottom: 2px solid #dddddd;
+
+        @media (max-width: 660px){
+          font-size: 14px;
+        }
+      }
+
+      td {
+        font-weight: 400 !important;
+        font-size: 16px;
+
+        .person-icon {
+          border-radius: 50%;
+          background: darkgrey;
+          padding: .8rem 1.2rem;
+          color: #ffffff;
+          font-weight: 600;
+          font-size: 20px;
+          border: 1px solid #ffffff;
+
+          @media (max-width: 660px){
+            padding: .5rem .9rem;
+            font-size: 16px;
+          }
+        }
+
+        &:nth-child(7),
+        &:nth-child(3){
+          min-width: 150px;
+        }
+
+        @media (max-width: 660px){
+          font-size: 12px!important;
+        }
+      }
+
+      &:nth-child(even) {
+        background-color: #dddddd;
+      }
+    }
+  }
+
+  .planet{
+    &:hover .person-planet{
+      display: none;
+    }
+    &:hover .hover-text{
+      display: inline;
+    }
+    .person-planet{
+      background: dodgerblue;
+      color: #ffffff;
+      border-radius: 50px;
+      font-size: 12px;
+      padding: .5rem 1rem;
+      cursor: pointer;
+    }
+
+    .hover-text{
+      display: none;
+      font-size: 10px;
+      background: dodgerblue;
+      border-radius: 50px;
+      padding: .5rem 1rem;
+      cursor: pointer;
+      color: #ffffff;
+    }
+  }
+
+  .table-actions{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .person-view{
+      cursor: pointer;
+      border-radius: 50px;
+      border: none;
+      outline: none;
+      background: #42b72a;
+      color: #ffffff;
+      padding: .5rem 1.5rem;
+    }
+  }
+}

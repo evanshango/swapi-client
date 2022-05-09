@@ -1,27 +1,19 @@
-# SwapiClient
+### SWAPI CLIENT
+This project is a client service implemented with Angular and graphQL. It does consume a custom backend service API implemented with Spring boot and GraphQL.
+The backend service is available from the following link [https://github.com/evanshango/swapi-graphql "Swapi-GraphQL"]
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.2.
+1. Follow the instructions detailed on the project linked to the url provided
+2. Once everything is set, you can proceed with the following steps
+3. Clone this project and save it in your preferred location where you can be easily access it.
+4. Once the download has completed, run the following command after navigating to the location in which the project was
+   saved. `npm i` to install the necessary dependencies. Once the dependency installation has completed run the command
+   `ng serve -o`. Your browser should automatically open having compiled the project code, you should be taken to the
+   homepage of the project.
 
-## Development server
+#### Docker Option
+The project has an attached docker file as part of the project files. If you have docker installed on your machine, you can proceed with the below steps
+1. Run the command `docker build -t swapi-client .`. Once the build process has completed proceed to the next step
+2. Run the command `docker run -dp 4200:80`. Open your favorite browser and navigate to the url `http://localhost:4200`.
+3. If everything run successfully, you should be navigated to the home page of this project with some star wars characters loaded.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

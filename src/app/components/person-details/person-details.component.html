@@ -1,0 +1,77 @@
+<div class="person-container">
+    <ng-container *ngIf="loading">
+      <app-loading></app-loading>
+    </ng-container>
+  <ng-container *ngIf="!loading && person$ | async as person">
+    <app-search [title]="'Viewing '+person.name+'\'s Details'" [detailPage]="true"
+                [extras]="person.name+ ' as a character has appeared in '+person.films.length+ ' films so far'">
+    </app-search>
+    <div class="extra-details">
+      <div class="bio">
+        <h4 class="grid-headers">Bio Info</h4>
+        <div class="bio-info">
+          <h4>Year of Birth</h4>
+          <h4 class="extra-info">{{person.birthYear}}</h4>
+        </div>
+        <div class="bio-info">
+          <h4>Height</h4>
+          <h4 class="extra-info">{{person.height}}</h4>
+        </div>
+        <div class="bio-info">
+          <h4>Weight</h4>
+          <h4 class="extra-info">{{person.mass}}</h4>
+        </div>
+        <div class="bio-info">
+          <h4>Eye Color</h4>
+          <h4 class="extra-info">{{person.eyeColor}}</h4>
+        </div>
+        <div class="bio-info">
+          <h4>Skin Color</h4>
+          <h4 class="extra-info">{{person.skinColor}}</h4>
+        </div>
+        <div class="bio-info">
+          <h4>Gender</h4>
+          <h4 class="extra-info">{{person.gender}}</h4>
+        </div>
+        <div class="bio-info">
+          <h4>Character Created</h4>
+          <h4 class="extra-info">{{person.created | date}}</h4>
+        </div>
+        <div class="bio-info">
+          <h4>Character Edited</h4>
+          <h4 class="extra-info">{{person.edited | date}}</h4>
+        </div>
+      </div>
+      <div class="planet">
+        <h4 class="grid-headers">Home Planet</h4>
+        <div class="planet-info">
+          <h4>Name</h4>
+          <h4 class="extra-info">{{person.planet.name}}</h4>
+        </div>
+        <div class="planet-info">
+          <h4>Population</h4>
+          <h4 class="extra-info">{{person.planet.population}}</h4>
+        </div>
+        <div class="planet-info">
+          <h4>Diameter</h4>
+          <h4 class="extra-info">{{person.planet.diameter}}</h4>
+        </div>
+        <div class="planet-info">
+          <h4>Gravity</h4>
+          <h4 class="extra-info">{{person.planet.gravity}}</h4>
+        </div>
+        <div class="planet-info">
+          <h4>Terrain</h4>
+          <h4 class="extra-info">{{person.planet.terrain}}</h4>
+        </div>
+        <div class="planet-info">
+          <h4>Climate</h4>
+          <h4 class="extra-info">{{person.planet.climate}}</h4>
+        </div>
+      </div>
+    </div>
+    <div class="home-button">
+      <button routerLink="/">Back To Home</button>
+    </div>
+  </ng-container>
+</div>

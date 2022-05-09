@@ -1,0 +1,11 @@
+.container{
+  top: 55px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  .main-content{
+    margin: 1rem auto 0 auto;
+    width: 100%;
+  }
+}

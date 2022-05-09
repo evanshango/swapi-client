@@ -1,0 +1,10 @@
+<div class="home-container">
+  <app-search [title]="'May the Force be with You!!'" [detailPage]="false"></app-search>
+  <ng-container *ngIf="loading">
+    <app-loading></app-loading>
+  </ng-container>
+  <div *ngIf="!loading && persons$ | async as persons" class="person-list">
+    <app-custom-table [cols]="cols" [data]="persons" style="display: inline-block; width: 100%"></app-custom-table>
+    <app-pagination [prevPage]="persons.prevPage" [nextPage]="persons.nextPage"></app-pagination>
+  </div>
+</div>

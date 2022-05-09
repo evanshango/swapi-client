@@ -1,0 +1,27 @@
+<div class="table-container">
+  <table>
+    <tr>
+      <th *ngFor="let col of cols">{{col.colName}}</th>
+    </tr>
+    <tr *ngFor="let person of data.content; index as i">
+      <td>{{i + 1}}</td>
+      <td style="text-align: center">
+        <span class="person-icon">{{person.name.substring(0, 1)}}</span>
+      </td>
+      <td>{{person.name}}</td>
+      <td>{{person.height}}</td>
+      <td>{{person.mass}}</td>
+      <td style="text-transform: capitalize">{{person.gender}}</td>
+      <td class="planet">
+        <span class="person-planet">Planet</span>
+        <span class="hover-text" [routerLink]="'/persons/'+person.id">Click to View</span>
+      </td>
+      <td>{{person.films.length}}</td>
+      <td>
+        <div class="table-actions">
+          <button class="person-view" [routerLink]="'/persons/'+person.id">View</button>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
